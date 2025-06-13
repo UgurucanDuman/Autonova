@@ -1,0 +1,122 @@
+/* Page Transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Slide Transitions */
+.slide-enter {
+  transform: translateX(100%);
+}
+
+.slide-enter-active {
+  transform: translateX(0);
+  transition: transform 300ms ease-in-out;
+}
+
+.slide-exit {
+  transform: translateX(0);
+}
+
+.slide-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-in-out;
+}
+
+/* Fade Transitions */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+}
+
+/* Scale Transitions */
+.scale-enter {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.scale-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.scale-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.scale-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 300ms, transform 300ms;
+}
+
+/* Custom Swiper Styles */
+.swiper-pagination-bullet {
+  @apply bg-gray-300 dark:bg-gray-600;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-blue-600 dark:bg-blue-500;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-blue-600 dark:text-blue-500;
+}
+
+/* Phone Input Styles */
+.react-select-container .react-select__control {
+  @apply bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500;
+}
+
+.react-select-container .react-select__menu {
+  @apply bg-white dark:bg-gray-700 border dark:border-gray-600;
+}
+
+.react-select-container .react-select__option {
+  @apply text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600;
+}
+
+.react-select-container .react-select__single-value {
+  @apply text-gray-700 dark:text-gray-200;
+}
+
+.react-select-container .react-select__input {
+  @apply text-gray-700 dark:text-gray-200;
+}
+
+.react-select-container .react-select__placeholder {
+  @apply text-gray-400 dark:text-gray-500;
+}

@@ -1,0 +1,78 @@
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  /* General Layout */
+  .container {
+    @apply px-4 max-w-[100vw] overflow-x-hidden;
+  }
+
+  /* Search Bar */
+  .search-bar {
+    @apply relative z-20;
+    margin-top: 1rem;
+  }
+
+  .search-input {
+    @apply w-full;
+  }
+
+  /* Navigation */
+  .mobile-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t dark:border-gray-700 z-50;
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  /* Country Select */
+  .react-select-container {
+    @apply z-50;
+  }
+
+  .react-select__menu {
+    @apply bg-white dark:bg-gray-700 border dark:border-gray-600;
+  }
+
+  .react-select__option {
+    @apply text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-600;
+  }
+
+  /* Dark Mode Styles */
+  .dark {
+    .react-select__control {
+      @apply bg-gray-700 border-gray-600;
+    }
+    
+    .react-select__single-value {
+      @apply text-white;
+    }
+
+    .react-select__menu {
+      @apply bg-gray-700 border-gray-600;
+    }
+
+    .react-select__option {
+      @apply text-gray-200 hover:bg-gray-600;
+    }
+  }
+
+  /* Fix text overflow */
+  .truncate-text {
+    @apply truncate max-w-full;
+  }
+
+  /* Fix search bar positioning */
+  .search-container {
+    @apply relative z-30;
+  }
+
+  /* Bottom Navigation Spacing */
+  .pb-safe {
+    padding-bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+}
+
+/* iOS Safe Areas */
+@supports (padding: max(0px)) {
+  .mobile-nav {
+    padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+  }
+}
